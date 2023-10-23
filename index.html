@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <h1>You</h1>
+            <div class="img-container">
+                <img id="userRock" src="assets/userRock.png">
+                <img id="userPaper" src="assets/userPaper.png">
+                <img id="userScis" src="assets/userScis.png">
+            </div>
+            <div class="button-container">
+                <button onclick="rpsGame('rock'); showImg('userRock')">Rock</button>
+                <button onclick="rpsGame('paper'); showImg('userPaper')">Paper</button>
+                <button onclick="rpsGame('scissors'); showImg('userScis')">Scissors</button>
+            </div>
+        </div>
+        <div class="card">
+            <h1 id="gameDecision"></h1>
+            <div class="scoreboard">
+                <p id="userScore"></p>
+                <button onclick="reset()">RESET</button>
+                <p id="compScore"></p>
+            </div>
+        </div>
+        <div class="card">
+            <h1>Computer</h1>
+            <div class="img-container">
+                <img id="compRock" src="assets/compRock.png">
+                <img id="compPaper" src="assets/compPaper.png">
+                <img id="compScis" src="assets/compScis.png">
+            </div>
+            <h1>Billy picks <span id="computerChoice"></span></h1>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

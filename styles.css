@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600&display=swap');
+
+html {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 600;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, hsla(40, 98%, 51%, 1) 0%, hsla(0, 0%, 66%, 1) 100%);
+}
+
+h1 {
+    margin: 0;
+}
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100vh;
+}
+
+.img-container {
+    width: 500px;
+    height: 500px;
+}
+
+.img-container > img {
+    position: absolute;
+}
+
+#userRock {
+    display: none;
+}
+
+#userPaper {
+    display: none;
+}
+
+#userScis {
+    display: none;
+}
+
+#compRock {
+    display: none;
+}
+
+#compPaper {
+    display: none;
+}
+
+#compScis {
+    display: none;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+p {
+    font-size: 5vmin;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card button {
+    padding: 20px;
+    border-radius: 100px;
+    width: 15vmin;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 600;
+    border: 4px #40210f solid;
+    background: #ffe100;
+}
+
+.card button:hover {
+    background: #ffed63;
+    color: #40210f;
+    transition: all 0.2s;
+}
+
+.button-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
