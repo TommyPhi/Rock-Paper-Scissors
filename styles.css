@@ -9,7 +9,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(90deg, hsla(40, 98%, 51%, 1) 0%, hsla(0, 0%, 66%, 1) 100%);
+    background: linear-gradient(to bottom right, hsla(40, 98%, 51%, 1) 0%, hsla(0, 0%, 66%, 1) 100%);
 }
 
 h1 {
@@ -56,6 +56,11 @@ h1 {
     display: none;
 }
 
+#rules {
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
 .scoreboard {
     display: flex;
     justify-content: space-evenly;
@@ -63,7 +68,7 @@ h1 {
 }
 
 p {
-    font-size: 5vmin;
+    font-size: 16pt;
 }
 
 .card {

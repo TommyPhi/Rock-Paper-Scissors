@@ -3,6 +3,7 @@ let compPoints = 0;
 let compChoice;
 const rpsChoices = ['rock', 'paper', 'scissors'];
 const compChoices = ['compRock', 'compPaper', 'compScis'];
+const winLose = document.querySelector('[data-winLoseText]');
 
 const showImg = (img) => {
     switch(img) {
@@ -159,4 +160,27 @@ const reset = () => {
         .style.display = "none";
     document.getElementById('userScis')
         .style.display = "none";
+}
+
+const firstToTen = () => {
+    if(userPoints !== 10 && compPoints !== 10) {
+        return;
+    }
+    else {
+        if(userPoints === 10) {
+            window.location.replace("./winOrLose.html?w");
+        } else {
+            window.location.replace("./winOrLose.html?l");
+        }
+    }
+}
+
+const startOver = () => {
+    window.location.replace("./index.html")
+}
+
+if(window.location.href.includes('winOrLose.html?l')) {
+    document.getElementById('winOrLose').innerHTML = 'You lose!';
+} else {
+    document.getElementById('winOrLose').innerHTML = 'You win!';
 }

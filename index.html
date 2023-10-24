@@ -16,12 +16,13 @@
                 <img id="userScis" src="assets/userScis.png">
             </div>
             <div class="button-container">
-                <button onclick="rpsGame('rock'); showImg('userRock')">Rock</button>
-                <button onclick="rpsGame('paper'); showImg('userPaper')">Paper</button>
-                <button onclick="rpsGame('scissors'); showImg('userScis')">Scissors</button>
+                <button onclick="rpsGame('rock'); showImg('userRock'); firstToTen()">Rock</button>
+                <button onclick="rpsGame('paper'); showImg('userPaper'); firstToTen()">Paper</button>
+                <button onclick="rpsGame('scissors'); showImg('userScis'); firstToTen()">Scissors</button>
             </div>
         </div>
         <div class="card">
+            <h1 id="rules">First to ten wins!</h1>
             <h1 id="gameDecision"></h1>
             <div class="scoreboard">
                 <p id="userScore"></p>
