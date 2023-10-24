@@ -7,21 +7,31 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Container for each card (Grid) -->
     <div class="card-container">
+        <!-- User card (Flexbox) -->
         <div class="card">
+            <!-- Contains content for User Player -->
             <h1>You</h1>
             <div class="img-container">
                 <img id="userRock" src="assets/userRock.png">
                 <img id="userPaper" src="assets/userPaper.png">
                 <img id="userScis" src="assets/userScis.png">
             </div>
+            <!-- Container for Buttons -->
             <div class="button-container">
                 <button onclick="rpsGame('rock'); showImg('userRock'); firstToTen()">Rock</button>
                 <button onclick="rpsGame('paper'); showImg('userPaper'); firstToTen()">Paper</button>
                 <button onclick="rpsGame('scissors'); showImg('userScis'); firstToTen()">Scissors</button>
             </div>
+            <!-- Text input if user wants to play with text input rather than buttons -->
+            <form autocomplete="off" onsubmit="checkInput(); return false">
+                <input id="userInput" type="text" placeholder="Type here!">
+            </form>
         </div>
+        <!-- Scoreboard Card -->
         <div class="card">
+            <!-- Contains content for scoreboard -->
             <h1 id="rules">First to ten wins!</h1>
             <h1 id="gameDecision"></h1>
             <div class="scoreboard">
@@ -30,14 +40,16 @@
                 <p id="compScore"></p>
             </div>
         </div>
-        <div class="card">
+        <!-- Computer Card -->
+        <div id="computerCard" class="card">
+            <!-- Contains content for computer -->
             <h1>Computer</h1>
             <div class="img-container">
                 <img id="compRock" src="assets/compRock.png">
                 <img id="compPaper" src="assets/compPaper.png">
                 <img id="compScis" src="assets/compScis.png">
             </div>
-            <h1>Billy picks <span id="computerChoice"></span></h1>
+            <h1 id="computerPicks">Billy picks <span id="computerChoice"></span></h1>
         </div>
     </div>
     <script src="script.js"></script>

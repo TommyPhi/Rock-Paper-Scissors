@@ -1,37 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600&display=swap');
 
+/* Sets global font for HTML files */
 html {
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 600;
 }
 
+/* CSS for Body */
 body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom right, hsla(40, 98%, 51%, 1) 0%, hsla(0, 0%, 66%, 1) 100%);
 }
 
+/* CSS for H1 */
 h1 {
     margin: 0;
 }
 
-
+/* CSS for Card Container */
 .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100vh;
 }
 
+/* CSS for Image Container */
 .img-container {
     width: 500px;
     height: 500px;
 }
 
+/* CSS for Images in Image Container */
 .img-container > img {
     position: absolute;
 }
 
+/* CSS for each specific image */
 #userRock {
     display: none;
 }
@@ -56,21 +62,29 @@ h1 {
     display: none;
 }
 
+#computerCard {
+    margin-bottom: 115px;
+}
+
+/* CSS for Rules */
 #rules {
     justify-content: center;
     margin-bottom: 100px;
 }
 
+/* CSS for scoreboard container */
 .scoreboard {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
 }
 
+/* CSS for P tags */
 p {
     font-size: 16pt;
 }
 
+/* CSS for Cards */
 .card {
     display: flex;
     flex-direction: column;
@@ -78,6 +92,7 @@ p {
     align-items: center;
 }
 
+/* CSS for buttons in Card */
 .card button {
     padding: 20px;
     border-radius: 100px;
@@ -89,15 +104,29 @@ p {
     background: #ffe100;
 }
 
+ /* CSS for buttons on hover in cards */ 
 .card button:hover {
     background: #ffed63;
     color: #40210f;
     transition: all 0.2s;
 }
 
+/* CSS for Button container */
 .button-container {
     display: flex;
     width: 100%;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+/* CSS for Input */
+input {
+    border-radius: 100px;
+    border: 4px #40210f solid;
+    padding: 10px;
+    margin: 25px;
+    background-color: #ffe311;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 600;
 }
