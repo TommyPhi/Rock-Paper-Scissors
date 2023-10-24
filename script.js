@@ -1,9 +1,11 @@
+// Variable Declarations
 let userPoints = 0;
 let compPoints = 0;
 let compChoice;
 const rpsChoices = ['rock', 'paper', 'scissors'];
 const compChoices = ['compRock', 'compPaper', 'compScis'];
 
+// Function that runs on button click. Changes image based on button pressed.
 const showImg = (img) => {
     switch(img) {
         case 'userRock':
@@ -33,6 +35,7 @@ const showImg = (img) => {
     }
 }
 
+// Function that runs on button click. Randomizes number for computer and changes image based on what computer picks. Checks userInput and Computer and determines winner.
 const rpsGame = (userInput) => {
     let randomNum = Math.floor(Math.random() * (2 - 0 + 1) + 0);
     compChoice = rpsChoices[randomNum];
@@ -150,6 +153,7 @@ const rpsGame = (userInput) => {
     document.getElementById('compScore').innerHTML = compPoints;
 }
 
+//Function that resets user and computer points. Resets all instances of string changes. Hides all images.
 const reset = () => {
     userPoints = 0;
     compPoints = 0;
@@ -170,6 +174,7 @@ const reset = () => {
         .style.display = "none";
 }
 
+//Function that checks when either user or computer reaches ten points.
 const firstToTen = () => {
     if(userPoints !== 10 && compPoints !== 10) {
         return;
@@ -183,10 +188,12 @@ const firstToTen = () => {
     }
 }
 
+//Function that reloates window back to homepage.
 const startOver = () => {
     window.location.replace("./index.html")
 }
 
+//Function that validates user input inside textbox.
 const checkInput = () => {
     userInput = document.getElementById('userInput').value;
     userInput.toString().toLowerCase();
@@ -231,6 +238,7 @@ const checkInput = () => {
     }
 }
 
+//If statement that checks the win or lose screen and changes background color.
 if(window.location.href.includes('winOrLose.html?l')) {
     document.getElementById('winOrLose').innerHTML = 'You lose!';
     document.getElementById('body')
